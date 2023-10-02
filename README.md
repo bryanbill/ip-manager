@@ -8,17 +8,12 @@ The IP Manager API is a Java Spring Boot application that allows you to manage I
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
-  - [Building the Application](#building-the-application)
   - [Running the Application](#running-the-application)
 - [Endpoints](#endpoints)
   - [IP Address Endpoints](#ip-address-endpoints)
   - [Subnet Calculator Endpoint](#subnet-calculator-endpoint)
 - [Authentication](#authentication)
-- [Docker](#docker)
-  - [Building the Docker Image](#building-the-docker-image)
-  - [Running the Docker Container](#running-the-docker-container)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -30,13 +25,13 @@ The IP Manager API is a Java Spring Boot application that allows you to manage I
 
 Before you begin, ensure you have met the following requirements:
 
-- Java Development Kit (JDK) 11 or later installed
+- Java Development Kit (JDK) 21 or later installed
 - Docker installed (optional, for Docker deployment)
 - MySQL database accessible (for database storage)
 
 ## Getting Started
 
-### Building the Application
+### Running the Application
 
 1. Clone the repository:
 
