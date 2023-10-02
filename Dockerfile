@@ -1,14 +1,11 @@
-# Use an official OpenJDK runtime as a base image
-FROM adoptopenjdk:17-jdk-hotspot-bionic
+FROM openjdk:21-ea-slim
 
-# Set the working directory in the container
-WORKDIR /app
+COPY . /usr/src/ipmanager
 
-# Copy the application JAR file to the container
-COPY target/your-application.jar /app/app.jar
+WORKDIR /usr/src/ipmanager
 
-# Expose the port that the application will run on
+RUN ./mvnw clean package -DskipTests
+
 EXPOSE 8080
 
-# Specify the command to run on container start
-CMD ["java", "-jar", "app.jar"]
+CMD ["./mvnw", "spring-boot:run"]
