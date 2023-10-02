@@ -13,8 +13,11 @@ import java.util.Optional;
 @RequestMapping("/ip")
 public class IPAddressController {
 
-    @Autowired
-    private IPAddressService ipAddressService;
+    private final IPAddressService ipAddressService;
+
+    public IPAddressController(IPAddressService ipAddressService) {
+        this.ipAddressService = ipAddressService;
+    }
 
     // Endpoint to allocate IP Address
     @PostMapping("/allocate")

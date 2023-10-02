@@ -21,5 +21,5 @@ public interface IPAddressRepository extends JpaRepository<IPAddress, Long> {
     @Transactional
     @Modifying
     @Query("update IPAddress ip set ip.status = ?1, ip.customer.id = ?2 where ip.ip = ?3")
-    void updateStatusAndCustomerByIp(IPAddressStatus status, Long customerId, String ipAddress);
+    void updateByIp(IPAddressStatus status, Long customerId, String ipAddress);
 }
