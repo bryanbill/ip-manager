@@ -72,7 +72,7 @@ public class IPAddressService {
 
             // Check if the IP is already released
             if (releasedIP.getStatus() != IPAddressStatus.ALLOCATED) {
-                return new ResponseEntity<>("IP is not all ocated", HttpStatus.NOT_FOUND);
+                return new ResponseEntity<>("IP is not allocated", HttpStatus.NOT_FOUND);
             }
 
             // Set the IP status back to AVAILABLE and remove customer association
